@@ -8,7 +8,7 @@ export default function Feedback() {
   async function onFormSubmit(e) {
     e.preventDefault();
     //make a request to server post api ,localhost:3000/feedback
-    const response = await axios.post("http://localhost:3000/feedback", {
+    const response = await axios.post("https://feedback-backend-ejgw.onrender.com/feedback", {
       name,
       message,
     });
