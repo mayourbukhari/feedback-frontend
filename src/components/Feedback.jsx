@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 export default function Feedback() {
@@ -12,7 +12,11 @@ export default function Feedback() {
       { name, message }
     );
     console.log(response.data);
-    alert(response.data);
+    alert(
+      typeof response.data === "object"
+        ? response.data.message || JSON.stringify(response.data)
+        : response.data
+    );
   }
 
   function onNameChange(e) {
