@@ -4,7 +4,7 @@ export default function Admin() {
     const [feedbacks,setFeedback]=useState([]);
 
     async function getFeedback(){
-        const response =await  axios("http://localhost:3000/feedbacks");
+        const response =await  axios("https://feedback-backend-ejgw.onrender.com");
         setFeedback(response.data)
         console.log(response.data)
     }
